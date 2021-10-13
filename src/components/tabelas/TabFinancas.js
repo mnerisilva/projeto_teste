@@ -2,8 +2,9 @@ import data from '../../api/Api';
 import { TabFinancasStyled } from './TabFinancas.style';
 import { IconeBootstrap } from '../icons/IconeBootstrap.style';
 import { Table } from 'react-bootstrap';
-const TabFinancas = () =>{
-
+const TabFinancas = (props) =>{
+    console.log('filtro: ' + props.mesFiltro);
+    console.log('filtro: ' + typeof props.mesFiltro);
     const data_hoje = new Date();
     const dia_atual = data_hoje.getDay();
     const mes_atual = data_hoje.getMonth()+1;
@@ -28,7 +29,7 @@ const TabFinancas = () =>{
 
                     {data.map((item) => {
                         let mes_inclusao = item.data_criacao.split('/')[1]
-                        if(mes_atual.toString() === mes_inclusao ){
+                        if(props.mesFiltro === mes_inclusao ){
                             return (<tr key={item.id}>
                                 <td>{item.id}</td>
                                 <td>{item.nome}</td>
