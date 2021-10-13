@@ -27,15 +27,18 @@ const TabFinancas = () =>{
                 <tbody>
 
                     {data.map((item) => {
-                        return (<tr key={item.id}>
-                            <td>{item.id}</td>
-                            <td>{item.nome}</td>
-                            <td>{item.categoria}</td>
-                            <td>{item.data_criacao}</td>
-                            <td>{item.data_modificacao}</td>
-                            <td className="valor">R$ {item.valor}</td>
-                            <td><IconeBootstrap><i class="bi bi-pencil"></i></IconeBootstrap></td>
-                        </tr>);
+                        let mes_inclusao = item.data_criacao.split('/')[1]
+                        if(mes_atual.toString() === mes_inclusao ){
+                            return (<tr key={item.id}>
+                                <td>{item.id}</td>
+                                <td>{item.nome}</td>
+                                <td>{item.categoria}</td>
+                                <td>{item.data_criacao}</td>
+                                <td>{item.data_modificacao}</td>
+                                <td className="valor">R$ {item.valor}</td>
+                                <td><IconeBootstrap><i className="bi bi-pencil"></i></IconeBootstrap></td>
+                            </tr>);                          
+                        }
                     })}
                    
                 </tbody>

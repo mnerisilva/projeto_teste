@@ -20,7 +20,7 @@ const data = [
         categoria: 'supermercado',
         nome: 'Carrefour',
         valor: '1.250,00',
-        data_criacao: '07/10/2021',
+        data_criacao: '07/9/2021',
         data_modificacao: '08/10/2021'
     },
     {
