@@ -1,0 +1,8 @@
+.select-mes {
+    width: 160px !important;
+
+}
+
+.form-select:focus {
+    box-shadow: none;
+}

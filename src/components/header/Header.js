@@ -3,7 +3,7 @@ import { HeaderSlyled } from "./Header.style";
 const Header = () => {
     return(
         <HeaderSlyled>
-            Sistema Financeiro
+            Controle Financeiro
         </HeaderSlyled>
     );
 }

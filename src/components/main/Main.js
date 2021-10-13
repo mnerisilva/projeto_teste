@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { MainStyled } from "./Main.slyle";
+import './MainSelect.style.css';
 //import Container from './Container';
 import TabFinancas from '../tabelas/TabFinancas';
 
