@@ -6,19 +6,20 @@ import TabFinancas from '../tabelas/TabFinancas';
 const Main = () => {
 
     
-    const [value, setValue] = useState('');
-    let mes_filtro = '1';
+    const data_hoje = new Date();
+    const mes_atual = data_hoje.getMonth()+1;
+    
+    const [value, setValue] = useState(mes_atual.toString());
 
+    //setValue(mes_atual.toString());
     
     const onChange = (event) => {
         setValue(event.target.value);
-        console.log('fsfs: '+event.target.value);
-        mes_filtro = event.target.value.toString();
     };
 
     return(
         <MainStyled>
-                <select className="form-select" aria-label="Default select example" onChange={onChange}>
+                <select className="form-select select-mes" aria-label="Default select example" onChange={onChange}>
                     <option value="">Selecione o mês</option>
                     <option value="1">janeiro</option>
                     <option value="2">fevereiro</option>
