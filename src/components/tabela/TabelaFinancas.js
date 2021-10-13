@@ -1,14 +1,17 @@
 import data from '../../api/Api';
+import { TabelaFinancasStyled } from './TabelaFinancas.style';
+import { Table } from 'react-bootstrap';
 const TabelaFinancas = () =>{
     return(
-        <div>
-            <table>
+        <TabelaFinancasStyled>
+            <Table>
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Nome</th>
                         <th>Categoria</th>
                         <th>Valor</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -19,12 +22,13 @@ const TabelaFinancas = () =>{
                             <td>{item.nome}</td>
                             <td>{item.categoria}</td>
                             <td className="valor">R$ {item.valor}</td>
+                            <td></td>
                         </tr>);
                     })}
                    
                 </tbody>
-            </table>
-        </div>
+            </Table>
+        </TabelaFinancasStyled>
     );
 }
 
