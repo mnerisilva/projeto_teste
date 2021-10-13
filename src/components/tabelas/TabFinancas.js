@@ -1,10 +1,17 @@
 import data from '../../api/Api';
-import { TabelaFinancasStyled } from './TabelaFinancas.style';
+import { TabFinancasStyled } from './TabFinancas.style';
 import { IconeBootstrap } from '../icons/IconeBootstrap.style';
 import { Table } from 'react-bootstrap';
-const TabelaFinancas = () =>{
+const TabFinancas = () =>{
+
+    const data_hoje = new Date();
+    const dia_atual = data_hoje.getDay();
+    const mes_atual = data_hoje.getMonth()+1;
+    const ano_atual = data_hoje.getFullYear();
+    console.log(dia_atual+'/'+mes_atual+'/'+ano_atual);
+
     return(
-        <TabelaFinancasStyled>
+        <TabFinancasStyled>
             <Table>
                 <thead>
                     <tr>
@@ -33,8 +40,8 @@ const TabelaFinancas = () =>{
                    
                 </tbody>
             </Table>
-        </TabelaFinancasStyled>
+        </TabFinancasStyled>
     );
 }
 
-export default TabelaFinancas;
+export default TabFinancas;

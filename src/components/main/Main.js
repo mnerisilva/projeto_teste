@@ -1,10 +1,10 @@
 import { MainStyled } from "./Main.slyle";
-import TabelaFinancas from '../tabela/TabelaFinancas';
+import TabFinancas from '../tabelas/TabFinancas';
 
 const Main = () => {
     return(
         <MainStyled>
-            <TabelaFinancas />
+            <TabFinancas />
         </MainStyled>
     );
 }

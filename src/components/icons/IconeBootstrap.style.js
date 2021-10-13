@@ -4,7 +4,6 @@ export const IconeBootstrap = styled.span`
     cursor: pointer;
     width: 70px;
     height: 40px;
-    border: solid thin #ccc;
     padding: 5px 15px;
     &:hover {
         transition: all .3s;
